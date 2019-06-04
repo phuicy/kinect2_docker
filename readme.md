@@ -14,4 +14,11 @@ Hopefully as simple as that.
 * Xbox one camera
 * Linux
 
+## Common issues
 
+Sometimes you need to change the current active `DISPLAY`. To do this edit the the docker-compose.yml to:
+
+```
+environment:
+  - "DISPLAY=:1"
+```
