@@ -1,0 +1,16 @@
+version: '2.3'
+services:
+  kinect2:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    devices:
+     - "/dev/bus/usb:/dev/bus/usb"
+     - "/dev/dri:/dev/dri"
+     - "/dev/input:/dev/input"
+    environment:
+     - DISPLAY=unix:0
+    volumes:
+     - "/tmp/.X11-unix:/tmp/.X11-unix"  
+    runtime: nvidia
+
